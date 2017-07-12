@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./lib/flexible/flexible.js"></script>
+    <script src="./lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/commmon.css"/>
+    <link rel="stylesheet" href="./css/bijia.css"/>
+
+</head>
+<body>
+
+<!--头部开始-->
+<header id="header">
+    <div class="left">
+        <img src="./images/header_logo.png" alt=""/>
+    </div>
+    <div class="right">
+        <img src="./images/header_app.png" alt=""/>
+    </div>
+</header>
+<!--头部结束-->
+
+<!--搜索框开始-->
+<section id="search-box">
+    <input type="button" value="搜索"/>
+    <div class="wrap">
+        <input type="search" placeholder="请输入您想要比价的商品"/>
+    </div>
+</section>
+<!--搜索框结束-->
+
+<!--筛选框开始-->
+<section id="choose">
+    <span>
+        <a href="index.html">首页 ></a>
+        <a href="javscript:;">电视 ></a>
+        <a href="category.html">乐视TV(Letv)S50 ></a>
+    </span>
+    <span>
+          <a>筛选</a>
+    </span>
+</section>
+<!--筛选结束-->
+
+<div class="exhibe">
+    <!--内容开始-->
+    <!--<div id="exhibte">-->
+        <!--<h3>乐视TV(Letv)S50 Air全配版本2D 50英寸  全高清 LED液晶显示屏</h3>-->
+        <!--<img src="./" alt=""/>-->
+        <!--<img src="./images/gengduo.png" alt=""/>-->
+    <!--</div>-->
+    <!--<div class="compare">-->
+        <!--<a href="javascript:;">比价购买</a>-->
+        <!--<a href="javascript:;">产品参数</a>-->
+        <!--<a href="javascript:;">评价(2322)</a>-->
+    <!--</div>-->
+
+
+    <div class="buy">
+        <!--<img src="" alt=""/>-->
+        <!--<span>京东商城</span>-->
+        <!--<span class="fr">去购买</span>-->
+        <!--<span class="fr">&yen;1999.00</span>-->
+    </div>
+</div>
+    <p class="tips">* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+    <!--内容结束-->
+
+    <!--网友评论开始-->
+    <div class="comment">
+        <h3>网友评价</h3>
+        <!--<div class="user">-->
+            <!--<div class="mesFrom">-->
+                <!--<p class="clearfix">-->
+                    <!--<span class="fl">b***r</span>-->
+                    <!--<span class="fr">timer</span>-->
+                <!--</p>-->
+                <!--<p>from</p>-->
+            <!--</div>-->
+            <!--<div class="mesCont">-->
+                <!--使用了一周整体不错，主要是为了看纪录片和足球。-->
+                <!--装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，-->
+                <!--应该说对得起2200的价格！还送了五年乐视会员，看英超所有-->
+                <!--比赛都free，但乐观乐视内容这块还不太丰富，应为家里也有-->
+                <!--百事通bestv和小米盒子，比较了下，电影百事通最好，纪录-->
+                <!--片小米最好，只有体育这块乐视比那两家好，还要多努力啊！-->
+                <!--电视本身有个不足，音响太差，太山寨了！而且不支持3.5mm-->
+                <!--接口或红白莲音频输出，害得我折腾半天，必须买光纤音频线-->
+            <!--</div>-->
+        <!--</div>-->
+        <!-- -->
+    </div>
+    <!--网友评论结束-->
+
+
+<!--加载开始-->
+<div class="loading">
+    <a href="javascript:;">查看更多评论</a>
+</div>
+<!--加载结束-->
+
+<!--底部开始-->
+<div id="foot">
+    <ul class="clearfix">
+        <li><a href="#">登录</a></li>
+        <li><a href="#">注册</a></li>
+        <li><a href="#">
+            <img src="./images/top.jpg" alt=""/>
+            返回顶部</a></li>
+    </ul>
+    <p>
+        <a href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+    </p>
+    <p>m.manmanbuy.com</p>
+</div>
+<!--底部结束-->
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script id="tplTitle" type="text/html">
+    <!--{{each list as item}}-->
+    <!--<span>-->
+        <!--<a href="index.html">首页 ></a>-->
+        <!--<a href="productlist.html">{{item}}></a>-->
+        <!--<a href="category.html">乐视TV(Letv)S50 ></a>-->
+    <!--</span>-->
+    <!--<span>-->
+          <!--<a>筛选</a>-->
+    <!--</span>-->
+    <!--{{/each}}-->
+</script>
+
+<script id="tplPro" type="text/html">
+    <div id="exhibte">
+        <h3>{{productName}}</h3>
+        {{#productImg}}
+        <img src="./images/gengduo.png" alt=""/>
+    </div>
+    <div class="compare">
+        <a href="javascript:;">比价购买</a>
+        <a href="javascript:;">产品参数</a>
+        <a href="javascript:;">评价(2322)</a>
+    </div>
+    <div class="buy">
+        {{#bjShop}}
+    </div>
+
+</script>
+<script id="tplCom" type="text/html">
+   {{each list as item}}
+    <div class="user">
+        <div class="mesFrom">
+            <p class="clearfix">
+                <span class="fl">{{item.comName}}</span>
+                <span class="fr">{{item.comTime}}</span>
+            </p>
+            <p>{{item.comFrom}}</p>
+        </div>
+        <div class="mesCont">
+            {{item.comContent}}
+        </div>
+    </div>
+{{/each}}
+</script>
+<script src="common.js"></script>
+<script src="./js/bijia.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+// 设计图 750px  使用 flexible, 认为全屏是 10 rem， 所以 1rem 就对应 75px
+// px => rem 要除以 75
+
+// 基准值 设计图 / 10
+@remBase : 75;
+
+// 使用例子 1：
+//    高度量出来 88px => height: 88*@rem;
+
+// 这里 round 是一个函数可以对小数进行保留，这里就是保留 6位小数的意思
+@rem: round(1 / @remBase, 6) * 1rem; 
+
+
+
+
+// 字体最好不用 rem 因为用了 rem 很可能出现 13px 15px等怪异的字体大小，用户体验不好
+// 一般还是 px 通过检测 dpr 来设置 不同手机的 字体大小
+// 为了方便，我们用 less 写一个 mixin
+
+// 使用例子 2：字体大小 14px .font-size(14);
+.font-size(@px) {
+    [data-dpr='1'] & {
+        font-size: round(@px * 1) * 1px;
+    }
+    [data-dpr='2'] & {
+        font-size: round(@px * 2) * 1px;
+    }
+    [data-dpr="3"] & {
+        font-size: round(@px * 3) * 1px;
+    }
+}

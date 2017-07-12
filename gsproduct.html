@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./lib/flexible/flexible.js"></script>
+    <script src="./lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/commmon.css"/>
+    <link rel="stylesheet" href="./css/gsproduct.css"/>
+</head>
+<body>
+<!--头部开始-->
+<header id="header">
+    <div class="l">
+        <a href="index.html"><</a>
+    </div>
+    <div class="right">
+        <img src="./images/header_app.png" alt=""/>
+    </div>
+    <div class="center">
+        <h1>凑单品</h1>
+    </div>
+</header>
+<!--头部结束-->
+
+<div id="search">
+    <div class="search fr">
+
+    </div>
+    <div class="dropDown">
+        <span>
+            京东 <i></i>
+        </span>
+        <span>
+            华北 <i></i>
+        </span>
+        <span>
+            全部价格 <i></i>
+        </span>
+    </div>
+    <div class="close">
+        <div class="wrap shop hide">
+            <!--<span><a href="javascrip:;">京东</a></span>-->
+        </div>
+        <div class="wrap area hide">
+            <!--<span><a href="javascrip:;">华北</a></span>-->
+        </div>
+        <div class="wrap price hide">
+            <span><a href="javascrip:;">全部价格</a></span>
+        </div>
+    </div>
+</div>
+
+<div id="display">
+    <ul class="clearfix">
+        <!--<li>-->
+            <!--<a href="javascript:;">-->
+                <!--<img src="" alt=""/>-->
+                <!--<p>吉米家居 JM-G173530 0.5*30m</p>-->
+                <!--<div class="wrap">-->
+                    <!--<span>&yen;1.00</span>-->
+                    <!--<span>去凑单</span>-->
+                <!--</div>-->
+            <!--</a>-->
+        <!--</li>-->
+    </ul>
+</div>
+
+
+
+<!--底部开始-->
+<div id="foot">
+    <ul class="clearfix">
+        <li><a href="javascript:;">登录</a></li>
+        <li><a href="javascript:;">注册</a></li>
+        <li><a href="#">
+            <img src="./images/top.jpg" alt=""/>
+            返回顶部</a></li>
+    </ul>
+    <p>
+        <a href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+    </p>
+    <p>m.manmanbuy.com</p>
+</div>
+<!--底部结束-->
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+
+<script id="tpl" type="text/html">
+    {{each list}}
+    <span shopid="{{$value.shopId}}"><a href="javascrip:;">{{$value.shopName}}</a></span>
+    {{/each}}
+</script>
+<script id="tpl1" type="text/html">
+    {{each list}}
+    <span areaid="{{$value.areaId}}"><a href="javascrip:;">{{$value.areaName}}</a></span>
+    {{/each}}
+</script>
+
+<script id="tpl2" type="text/html">
+{{each list}}
+<li>
+    <a href="javascript:;">
+        <img src="{{#$value.productImg}}" alt=""/>
+        <p>{{$value.productName}}</p>
+        <div class="wrap">
+            <span>{{$value.productPrice}}</span>
+            <span>去凑单</span>
+        </div>
+    </a>
+</li>
+{{/each}}
+</script>
+
+<script src="common.js"></script>
+<script src="./js/gsproduct.js"></script>
+</body>
+</html>

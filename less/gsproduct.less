@@ -1,0 +1,209 @@
+@import "px2rem";
+
+#header{
+  position: relative;
+  text-align: center;
+  line-height: 98*@rem;
+  background-color: #FF841D;
+  .l{
+    width: 50*@rem;
+    height: 98*@rem;
+    line-height: 98*@rem;
+    position: absolute;
+    top: 0;
+    left: 20*@rem;
+    .font-size(24);
+    a{
+      display: block;
+      color: #ffffff;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .center{
+    h1{
+      font-weight: 700;
+      .font-size(20);
+      color: #ffffff;
+    }
+  }
+}
+//header部分结束
+
+
+//下拉框部分开始
+#search{
+  width: 100%;
+  height: 72*@rem;
+  border:1px solid #DADADA;
+  background-color: #fff;
+  position: relative;
+  //overflow: hidden;
+  .search{
+    width: 90*@rem;
+    height: 72*@rem;
+    box-sizing: border-box;
+    border-left: 1px solid #DADADA;
+  }
+  .dropDown{
+    //width: 100%;
+    //overflow: hidden;
+    margin-right: 90*@rem;
+    height: 72*@rem;
+    line-height: 72*@rem;
+    display:flex;
+
+    >span{
+      display: block;
+      height: 100%;
+      flex:1;
+      text-align: center;
+      position: relative;
+      color: #000;
+      .font-size(14);
+      i{
+        display: inline-block;
+        width: 20*@rem;
+        height: 20*@rem;
+        background: url("../images/icon_bar.png") -176px 0;
+        background-size: 220px 132px;
+      }
+    }
+    >span:nth-last-child(1){
+      flex:2;
+    }
+  }
+  .close{
+    >.wrap{
+      //background-color: #fff;
+      position: absolute;
+      width: 100%;
+      top: 75*@rem;
+      left: 0;
+      z-index: 5;
+      background-color: #fff;
+      border-bottom: 1px solid #BDBDAE;
+      box-shadow: 5*@rem 5*@rem 5*@rem #cccccc;
+      >span{
+        display: block;
+        width: 100%;
+        height: 72*@rem;
+        line-height: 72*@rem;
+        border-bottom: 1px solid #BDBDAE;
+        position: relative;
+
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding:0 20*@rem;
+          box-sizing: border-box;
+          color: #000;
+        }
+      }
+      >.on{
+        &::after{
+          content:'';
+          width: 45*@rem;
+          height: 45*@rem;
+          position:absolute;
+          top: 50%;
+          right: 20*@rem;
+          transform:translateY(-50%);
+          //background-color: red;
+          background:url("../images/ok.svg") no-repeat center;
+          background-size: 45*@rem 45*@rem;
+        }
+      }
+    }
+    >.wrap.hide{
+      display: none;
+    }
+    >.price{
+      span{
+        position: relative;
+        &::after{
+          content:'';
+          width: 45*@rem;
+          height: 45*@rem;
+          position:absolute;
+          top: 50%;
+          right: 20*@rem;
+          transform:translateY(-50%);
+          //background-color: red;
+          background:url("../images/ok.svg") no-repeat center;
+          background-size: 45*@rem 45*@rem;
+        }
+      }
+    }
+  }
+
+}
+
+#display {
+  width: 100%;
+  padding: 15*@rem;
+  margin-bottom: 50*@rem;
+  box-sizing: border-box;
+  >ul{
+    width:100%;
+    >li {
+      width: 355*@rem;
+      height: 455*@rem;
+      margin-bottom: 15*@rem;
+      background-color: #fff;
+      >a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        >img {
+                width: 100%;
+              }
+        >p {
+          width: 100%;
+          position:absolute;
+          bottom:80*@rem;
+          left: 0;
+          color: #000000;
+
+          text-overflow: clip;//必须
+          white-space: nowrap;//必须
+          overflow: hidden;//必须
+          //box-sizing: border-box;
+          //padding: 0 5*@rem;
+        }
+        >.wrap{
+          width: 100%;
+          position: absolute;
+          bottom:10*@rem;
+          left: 0;
+          >span{
+            color: #F6513A;
+            .font-size(14);
+          }
+          >span:nth-last-of-type(1) {
+            width: 130*@rem;
+            height: 55*@rem;
+            border-radius: 5*@rem;
+            border: 1px solid #F64F16;
+            background-color: #FF9501;
+            float: right;
+            text-align: center;
+            line-height:55*@rem ;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    >li:nth-child(2n) {
+      float: right;
+    }
+    >li:nth-child(2n+1) {
+      float: left;
+    }
+  }
+}
+
+//下拉框部分结束

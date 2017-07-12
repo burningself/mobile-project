@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script src="./common/config.js"></script>
+    <script>
+        (function() {
+            // renderNav();
+
+            // nav 导航栏的 渲染
+            function renderNav() {
+                // 获取数据并渲染
+                getNavData(function( data ) {
+                    // 拿到数据利用模板进行 渲染
+                    // data 是一个对象，且模板会遍历这个对象的所有属性，并作为变量添加到模板中
+                    var htmlStr = template( "mobanid", data );
+                    $('navUl').html( htmlStr );
+                    
+                    getNav2Data( function( data ) {
+                        // 第二级页面的渲染
+                    })
+                })
+            }
+
+
+            function getNav2Data( callback ) {
+                var url = Route.baseUrl + '/api/getindexmenu2'
+                // 请求 导航栏数据 
+                $.ajax({
+                    url: url,
+                    data: {},
+                    type: "get",
+                    dataType: 'json',
+                    success: function( data ) {
+                        callback( data );
+                    }
+                })
+            }
+
+            // nav 导航栏的数据获取
+            function getNavData( callback ) {
+                var url = Route.baseUrl + '/api/getindexmenu'
+                // 请求 导航栏数据 
+                $.ajax({
+                    url: url,
+                    data: {},
+                    type: "get",
+                    dataType: 'json',
+                    success: function( data ) {
+                        callback( data );
+                    }
+                })
+            }
+
+
+            // function renderNav() {
+            //     // 调用 获取数据的 ajax 请求
+
+            //     getindexmenu( function( res ) {
+            //         console.log( res );
+
+            //         // 进行页面的渲染，并绑定事件
+
+            //     })
+            // }
+
+
+            // // 获取数据的 ajax 请求
+            // function getindexmenu(callback) {
+            //     var url = Route.baseUrl + '/api/getindexmenu';
+            //     $.get( url, function( res ) {
+            //         callback && callback( res );
+            //     }, 'json');
+            // }
+
+        })();
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+#header {
+  position: relative;
+  text-align: center;
+  line-height: 1.306634rem;
+  background-color: #F4483E;
+}
+#header .l {
+  width: 0.66665rem;
+  height: 1.306634rem;
+  line-height: 1.306634rem;
+  position: absolute;
+  top: 0;
+  left: 0.26666rem;
+}
+[data-dpr='1'] #header .l {
+  font-size: 24px;
+}
+[data-dpr='2'] #header .l {
+  font-size: 48px;
+}
+[data-dpr="3"] #header .l {
+  font-size: 72px;
+}
+#header .l a {
+  display: block;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+#header .center h1 {
+  font-weight: 700;
+  color: #ffffff;
+}
+[data-dpr='1'] #header .center h1 {
+  font-size: 20px;
+}
+[data-dpr='2'] #header .center h1 {
+  font-size: 40px;
+}
+[data-dpr="3"] #header .center h1 {
+  font-size: 60px;
+}
+#content {
+  background-color: #fff;
+}
+#content .tips {
+  width: 100%;
+  height: 0.879978rem;
+  line-height: 1.146638rem;
+  text-align: center;
+  color: #9A9188;
+}
+#content .discount {
+  padding: 0.26666rem;
+  box-sizing: border-box;
+}
+#content .discount ul {
+  width: 100%;
+}
+#content .discount ul li {
+  width: 100%;
+  height: 3.133255rem;
+  padding: 0.26666rem 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #E2E2E2;
+}
+#content .discount ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#content .discount ul li a .img-l {
+  float: left;
+  margin-right: 0.26666rem;
+}
+#content .discount ul li a .img-l img {
+  display: block;
+  width: 2.6666rem;
+  height: 2.13328rem;
+}
+#content .discount ul li a .txt-r {
+  position: relative;
+  color: #000;
+  height: 100%;
+  overflow: hidden;
+}
+#content .discount ul li a .txt-r p {
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+  bottom: 0.66665rem;
+}
+#content .discount ul li a .txt-r span {
+  color: #EB7B31;
+  position: absolute;
+  left: 0;
+  bottom: 0.066665rem;
+}
+#content .discount ul li a .txt-r::after {
+  content: "";
+  width: 0.466655rem;
+  height: 0.79998rem;
+  background: url("../images/icon_bar.png") -103px -11px;
+  background-size: 220px 132px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+#model {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+#model a {
+  display: block;
+  width: 1.06664rem;
+  height: 1.06664rem;
+  line-height: 1.06664rem;
+  text-align: center;
+  color: #000000;
+  background-color: #fff;
+  font-weight: 700;
+  position: absolute;
+  right: 0.13333rem;
+  top: 0.13333rem;
+}
+#model img {
+  display: block;
+  width: 5.3332rem;
+  height: 5.3332rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,117 @@
+@import "px2rem";
+
+//header部分开始
+#header{
+  position: relative;
+  text-align: center;
+  line-height: 98*@rem;
+  .l{
+    width: 50*@rem;
+    height: 98*@rem;
+    line-height: 98*@rem;
+    position: absolute;
+    top: 0;
+    left: 20*@rem;
+    .font-size(24);
+
+    a{
+      display: block;
+      color: #ffffff;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .center{
+    h1{
+      font-weight: 700;
+      .font-size(22);
+      color: #ffffff;
+    }
+  }
+}
+//header部分结束
+#display {
+  background-color: #ffffff;
+
+
+  //margin-bottom: 20*@rem;
+  ul {
+    margin-bottom: 20*@rem;
+    li {
+      width: 100%;
+      height: 255*@rem;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        .left {
+          float: left;
+          img {
+            width: 200*@rem;
+            height: 200*@rem;
+            border: 1px solid #ccc;
+          }
+        }
+        .right {
+          margin-left: 200*@rem;
+          height: 100%;
+          padding-left: 20*@rem;
+          position: relative;
+          h3 {
+            color: #000;
+            .font-size(14);
+            span {
+              color: #ff6c00;
+            }
+          }
+          .bot {
+            width: 100%;
+            position: absolute;
+            bottom: 50*@rem;
+            left: 20*@rem;
+            i {
+              display: inline-block;
+              width: 25*@rem;
+              height: 25*@rem;
+              margin-top: 7*@rem;
+            }
+            i, span:nth-of-type(2) {
+              float: right;
+              margin-right: 20*@rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page{
+    background-color: #fff;
+    display: flex;
+
+    >span{
+      flex: 1;
+      text-align: center;
+      margin-bottom: 55*@rem;
+      >a {
+        display: inline-block;
+        width: 165*@rem;
+        height:68*@rem;
+        line-height: 68*@rem;
+        color:#000;
+        border-radius: 5px;
+        background:linear-gradient(to bottom,#fff,#d4d4d4);
+        border:1px solid #d4d4d4;
+      }
+      >select{
+        width: 180*@rem;
+        height:68*@rem;
+        text-align: center;
+        text-indent: 40*@rem;
+      }
+    }
+
+  }
+}

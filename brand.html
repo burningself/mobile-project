@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./lib/flexible/flexible.js"></script>
+    <script src="./lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/commmon.css"/>
+    <link rel="stylesheet" href="./css/brand.css"/>
+
+</head>
+<body>
+
+<!--头部开始-->
+<header id="header">
+    <div class="left">
+        <img src="./images/header_logo.png" alt=""/>
+    </div>
+    <div class="right">
+        <img src="./images/header_app.png" alt=""/>
+    </div>
+</header>
+<!--头部结束-->
+
+<!--搜索框开始-->
+<section id="search-box">
+    <input type="button" value="搜索"/>
+    <div class="wrap">
+        <input type="search" placeholder="请输入您想要比价的商品"/>
+    </div>
+</section>
+<!--搜索框结束-->
+
+<!--筛选框开始-->
+<section id="choose">
+    <span>
+        <a href="index.html">首页 ></a>
+        <a href="category.html">全部分类 ></a>
+    </span>
+
+</section>
+<!--筛选结束-->
+
+<div id="content">
+    <div class="rank brandtitle">
+        平板电视品牌好
+    </div>
+    <div class="goods">
+        <ul>
+            <!--<li>-->
+                <!--<a href="javascript:;">-->
+                    <!--<span class="first">1</span>-->
+                    <!--<h3>三星平板</h3>-->
+                    <!--<p>30天全网销售:242408件</p>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="javascript:;">-->
+                    <!--<span class="second">2</span>-->
+                    <!--<h3>创维</h3>-->
+                    <!--<p>30天全网销售:142408件</p>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="javascript:;">-->
+                    <!--<span class="third">3</span>-->
+                    <!--<h3>三星平板</h3>-->
+                    <!--<p>30甜全网销售:42408件</p>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="javascript:;">-->
+                    <!--<span>4</span>-->
+                    <!--<h3>三星平板</h3>-->
+                    <!--<p>30甜全网销售:2408件</p>-->
+                <!--</a>-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <div class="rank">
+        平板电视最近销量排行
+    </div>
+    <div class="sales">
+        <ul>
+            <!--<li>-->
+                <!--<a href="#">-->
+                    <!--<div class="left">-->
+                        <!--<img src="./images/product.jpg" alt="加载失败"/>-->
+                    <!--</div>-->
+                    <!--<div class="right">-->
+                        <!--<h3>标题</h3>-->
+                        <!--<p>价格</p>-->
+                        <!--<span>报价</span>-->
+                        <!--<span>评论</span>-->
+                        <!--<em>★★★★★</em>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li>-->
+        </ul>
+    </div>
+    <div class="rank">
+        平板电视最近更新
+    </div>
+    <div class="comments">
+        <!--<div class="message">-->
+                <!--<a href="#">-->
+                    <!--<div class="pic">-->
+                        <!--<div class="left fl">-->
+                            <!--<img src="" alt=""/>-->
+                        <!--</div>-->
+                            <!--<h3>标题</h3>-->
+                    <!--</div>-->
+                    <!--<div class="txt">-->
+                        <!--<i></i>-->
+                        <!--<i></i>-->
+                        <!--<div class="tips"><span class="tel"> tel </span> : <em class="start">★★★★★</em> <span class="data">data</span></div>-->
+                        <!--<p>总体满意吧，毕竟一分价钱一分货，做工简陋，显得份量没那么足。-->
+                            <!--外机很轻，不知道是啥牌子压缩机，外观漂亮，就是工艺差了点-->
+                            <!--很一般的孰料板，然后就是最为重要的制冷效果，适合18平方一下的-->
+                            <!--，大房间上1.5 吧  1匹的要开一个两个小时，房间整体温度才会降下-->
+                            <!--来，噪音方面确实很静音，制冷效果不是很理想，但是也够用了！安装-->
+                            <!--师傅很积极，上午一收货，下午立马就来安装，速度很赞，但是做起事-->
+                            <!--情来，太急忙了，一点都不细心弄，还不停的接电话，说什么马上到-->
+                            <!--20分钟到，很赶时间的样子，随便给我装好了，连打孔的那个孰料圈都-->
+                            <!--忘记卡上去，打孔很薄的墙壁收了我50块钱，最后安装完，急忙走了！-->
+                            <!--评论发布自 购买自：京东商城</p>-->
+                    <!--</div>-->
+                <!--</a>-->
+        <!--</div>-->
+
+    </div>
+</div>
+
+
+<!--底部开始-->
+<div id="foot">
+    <ul class="clearfix">
+        <li><a href="#">登录</a></li>
+        <li><a href="#">注册</a></li>
+        <li><a href="#">
+            <img src="./images/top.jpg" alt=""/>
+            返回顶部</a></li>
+    </ul>
+    <p>
+        <a href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+    </p>
+    <p>m.manmanbuy.com</p>
+</div>
+<!--底部结束-->
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script id="tplBrand" type="text/html">
+    {{each list as item i}}
+            <li>
+                <a href="productlist.html?categoryid={{item.categoryId}}">
+                    <span>{{i+1}}</span>
+                    <h3>{{item.brandName}}</h3>
+                    <p>{{item.brandInfo}}</p>
+                </a>
+            </li>
+    {{/each}}
+</script>
+<script id="tplRank" type="text/html">
+    {{each list as item i}}
+    <li>
+        <a href="bijia.html?productid={{item.productId}}">
+            <div class="left">
+                {{#item.productImg}}
+            </div>
+            <div class="right">
+                <h3>{{item.productName}}</h3>
+                <p>{{item.productPrice}}</p>
+                <span>{{item.productQuote}}</span>
+                <span>{{item.productCom}}</span>
+                <em>★★★★★</em>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script id="tplComments" type="text/html">
+    {{each result}}
+    <div class="message">
+        <a href="javascript:;">
+            <div class="pic">
+                <div class="left fl">
+                    <img src="" alt=""/>
+                </div>
+                <h3>标题</h3>
+            </div>
+            <div class="txt">
+                <i></i>
+                <i></i>
+                <div class="tips"><span style="color:#948642;" class="tel"> {{$value.comName}} </span> : <em class="start">★★★★★</em> <span class="data">{{$value.comTime}}</span></div>
+                <p>{{$value.comContent}} {{$value.comFrom}}</p>
+            </div>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<script src="./common.js"></script>
+<script src="./js/brand.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+@import  "px2rem";
+body{
+  background-color: #fff;
+}
+#dropDown{
+  margin-bottom: 50*@rem;
+  >ul{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    >li{
+      width: 100%;
+      //height: 78*@rem;
+      line-height:78*@rem ;
+      position: relative;
+      background-color: #ededed;
+      &:before{
+        display: block;
+        content:"";
+        width: 20px;
+        height: 15px;
+        background: url('../images/icon_bar.png') -352px 0 ;
+        position:absolute;
+        top: 30*@rem;
+        right: 28*@rem;
+      }
+      >a{
+        display: block;
+        width: 100%;
+        height: 78*@rem;
+        box-sizing: border-box;
+        padding-left:32*@rem;
+        font-size:36*@rem;
+        color: #000;
+        letter-spacing: 5*@rem;
+        font-family: arial;
+        border:1px solid #cccccc;
+        border-top: none;
+      }
+      >ul{
+        display:none;
+        background-color: #f9f9f9;
+        >li{
+          width: 33.33%;
+
+          box-sizing: border-box;
+          float: left;
+          text-align: center;
+
+          >a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-right: 1px solid #cccccc;
+            border-bottom: 1px solid #cccccc;
+            color:#000;
+          }
+        }
+        
+      }
+    }
+  
+  }
+}
+#foot{
+  >ul{
+    background-color: #f1f1f1;
+  }
+}

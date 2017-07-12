@@ -1,0 +1,206 @@
+#choose {
+  width: 100%;
+  height: 0.999975rem;
+  line-height: 0.999975rem;
+  margin-top: -0.239994rem;
+  border: 1px solid #ebebeb;
+  background: linear-gradient(to bottom, #ffffff, #ebebeb);
+  padding: 0 0.239994rem;
+  box-sizing: border-box;
+}
+[data-dpr='1'] #choose {
+  font-size: 14px;
+}
+[data-dpr='2'] #choose {
+  font-size: 28px;
+}
+[data-dpr="3"] #choose {
+  font-size: 42px;
+}
+#choose > span:nth-of-type(2) {
+  float: right;
+  width: 1.666625rem;
+  height: 0.733315rem;
+  line-height: 0.733315rem;
+  border-radius: 5px;
+  border: 1px solid #bababa;
+  background: linear-gradient(to top, #ffffff, #d7d7d7);
+  margin-top: 0.13333rem;
+}
+#choose > span:nth-of-type(2) a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+#choose a {
+  color: #000;
+}
+#exhibte {
+  width: 100%;
+  height: 6.733165rem;
+  text-align: center;
+  padding: 0.53332rem;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  position: relative;
+}
+#exhibte h3 {
+  color: #000;
+  margin-bottom: 0.66665rem;
+}
+[data-dpr='1'] #exhibte h3 {
+  font-size: 18px;
+}
+[data-dpr='2'] #exhibte h3 {
+  font-size: 36px;
+}
+[data-dpr="3"] #exhibte h3 {
+  font-size: 54px;
+}
+#exhibte img:nth-of-type(1) {
+  display: block;
+  margin: 0 auto;
+  width: 4.746548rem;
+  height: 3.026591rem;
+  border: 1px solid #cccccc;
+}
+#exhibte img:nth-last-child(1) {
+  width: 1.093306rem;
+  height: 1.093306rem;
+  position: absolute;
+  bottom: 0.53332rem;
+  right: 0.53332rem;
+}
+.compare {
+  width: 100%;
+  height: 0.893311rem;
+  line-height: 0.866645rem;
+  display: flex;
+  border-top: 1px solid #c55500 ;
+  border-bottom: 1px solid #c55500 ;
+}
+.compare > a {
+  flex: 1;
+  color: #ffffff;
+  text-align: center;
+  background-color: #ffc013;
+}
+[data-dpr='1'] .compare > a {
+  font-size: 15px;
+}
+[data-dpr='2'] .compare > a {
+  font-size: 30px;
+}
+[data-dpr="3"] .compare > a {
+  font-size: 45px;
+}
+.compare > a:nth-of-type(2) {
+  border-right: 1px solid #c55500;
+  border-left: 1px solid #c55500;
+}
+.compare > a:nth-child(1) {
+  background-color: #ff9d1d;
+}
+.buy {
+  width: 100%;
+  height: 1.186637rem;
+  line-height: 1.186637rem;
+  background-color: #fff;
+  text-indent: 0.26666rem;
+  border-bottom: 2px solid #cccccc;
+  color: #000000;
+}
+[data-dpr='1'] .buy {
+  font-size: 14px;
+}
+[data-dpr='2'] .buy {
+  font-size: 28px;
+}
+[data-dpr="3"] .buy {
+  font-size: 42px;
+}
+.buy > span:nth-child(3) {
+  color: #d10311;
+}
+.buy > span:nth-child(2) {
+  display: block;
+  width: 1.493296rem;
+  height: 0.599985rem;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #ff5500;
+  margin-right: 0.079998rem;
+  margin-left: 0.466655rem;
+  margin-top: 0.306659rem;
+  line-height: 0.599985rem;
+  text-indent: 0.173329rem;
+}
+.tips {
+  width: 100%;
+  height: 1.533295rem;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 0.26666rem 0.26666rem 0 0.26666rem;
+  border-bottom: 3px solid #777;
+}
+.comment {
+  background-color: #ffffff;
+}
+.comment h3 {
+  border-top: 1px solid #ffffff;
+  background-color: #dbdbdb;
+  text-align: center;
+  width: 100%;
+  height: 0.893311rem;
+  line-height: 0.893311rem;
+  color: #000000;
+}
+[data-dpr='1'] .comment h3 {
+  font-size: 14px;
+}
+[data-dpr='2'] .comment h3 {
+  font-size: 28px;
+}
+[data-dpr="3"] .comment h3 {
+  font-size: 42px;
+}
+.comment .user {
+  border-bottom: 1px solid #cccccc;
+  box-sizing: border-box;
+  padding: 0.333325rem;
+}
+.comment .user .mesFrom {
+  box-sizing: border-box;
+}
+.comment .user .mesFrom p:nth-child(2) {
+  text-align: right;
+}
+.loading {
+  width: 100%;
+  height: 1.933285rem;
+  line-height: 1.133305rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 0.39999rem 0.199995rem;
+}
+.loading a {
+  display: block;
+  width: 9.59976rem;
+  height: 0.866645rem;
+  line-height: 0.866645rem;
+  border-radius: 5px;
+  border: 1px solid #d4d4d4;
+  background: linear-gradient(to bottom, #f1f1f1, #d4d4d4);
+  text-align: center;
+  color: #000;
+}
+[data-dpr='1'] .loading a {
+  font-size: 14px;
+}
+[data-dpr='2'] .loading a {
+  font-size: 28px;
+}
+[data-dpr="3"] .loading a {
+  font-size: 42px;
+}

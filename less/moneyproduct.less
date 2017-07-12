@@ -1,0 +1,221 @@
+@import "px2rem";
+
+//header部分开始
+body{
+  background-color: #fff;
+}
+#header{
+  position: relative;
+  text-align: center;
+  line-height: 98*@rem;
+  .l{
+    width: 50*@rem;
+    height: 98*@rem;
+    line-height: 98*@rem;
+    position: absolute;
+    top: 0;
+    left: 20*@rem;
+    .font-size(24);
+
+    a{
+      display: block;
+      color: #ffffff;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .center{
+    h1{
+      font-weight: 700;
+      .font-size(20);
+      color: #ffffff;
+    }
+  }
+}
+//header部分结束
+
+#des{
+  padding:20*@rem;
+  box-sizing:border-box;
+  background-color: #ffffff;
+  >h3{
+    width: 100%;
+    //height:80*@rem;
+    .font-size(18);
+    font-weight: 700;
+  }
+  >.introduce{
+    >span{
+      margin-right: 20*@rem;
+    }
+    margin-bottom: 45*@rem;
+  }
+  >.productImgSm{
+    float: right;
+    width:250*@rem;
+    height: 280*@rem;
+    display: block;
+    //border:1px solid #cccccc;
+    margin-left: 20*@rem;
+    img{
+      width: 100%;
+    }
+  }
+  >p{
+    .font-size(14);
+    margin-bottom: 25*@rem;
+  }
+  >.wrap{
+    //width: 100%;
+    //height: 745*@rem;
+    >img{
+      display: block;
+      width: 100%;
+      height: 745*@rem;
+    }
+  }
+}
+
+.city{
+  padding-top: 20*@rem;
+  background-color: #fff;
+  ul{
+    margin:0 auto;
+    width: 250*@rem;
+    border: 1px solid #dbdbdb ;
+    border-top: none;
+    box-shadow: 5*@rem  5*@rem  5*@rem  #ccc;
+    margin-bottom: 40*@rem;
+    li{
+      display: flex;
+      text-align: center;
+      border-bottom: 1px dashed #cccccc;
+      //.font-size(12);
+      a{
+        background-color: #ffffff;
+        display: block;
+        width: 100%;
+        height: 100%;
+        >span{
+          display: block;
+          width: 100%;
+          color:#000;
+          text-align: left;
+          padding:0 20*@rem;
+          box-sizing: border-box;
+          .font-size(12);
+          strong{
+            color:#F18946;
+            float: right;
+          }
+        }
+      }
+    }
+  }
+  a{
+    display:block;
+    width: 670*@rem;
+    height:60*@rem;
+    line-height:60*@rem;
+    text-align: center;
+    border-radius: 10*@rem;
+    background-color: #FF9000;
+    margin:0 auto;
+    color: #ffffff;
+    .font-size(16);
+  }
+}
+.wx{
+  padding:20*@rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-top: 90*@rem;
+  margin-bottom: 60*@rem;
+}
+
+.comment{
+  padding:20*@rem;
+  box-sizing: border-box;
+  color: #000000;
+  //margin-bottom: 20*@rem;
+  .tit{
+    .font-size(16);
+    margin-bottom: 30*@rem;
+  }
+  .reply{
+     width: 100%;
+     height: 218*@rem;
+     border:2px solid #E6E3E0;
+     border-radius: 5*@rem;
+    margin-bottom: 30*@rem;
+    .form{
+      width: 100%;
+      height: 218*@rem;
+      position: relative;
+      textarea{
+        width: 100%;
+        height: 140*@rem;
+        resize: none;
+        border:none;
+        border-bottom:1px solid #e7e7e7;
+      }
+      .ctrl{
+        width: 200*@rem;
+        height: 77*@rem;
+        position:absolute;
+        right: 0;
+        bottom: 0;
+        border:1px solid #e7e7e7;
+        box-sizing: border-box;
+        input{
+          width: 100%;
+          height: 100%;
+          background-color: #FF841D;
+          color: #ffffff;
+          .font-size(16);
+
+        }
+      }
+    }
+   }
+  .newcomment{
+    .font-size(16);
+    margin-bottom: 30*@rem;
+  }
+  .list{
+    li{
+      .userimg{
+        width: 90*@rem;
+        height: 90*@rem;
+        float: left;
+        img{
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+      .con{
+        margin-left: 100*@rem;
+        overflow: hidden;
+        .font-size(14);
+        margin-bottom: 40*@rem;
+        .username{
+          float: left;
+          color: #8BCDF0;
+        }
+        .time{
+          float: right;
+          color: #9599AE;
+        }
+        .content{
+          margin-top: 10*@rem;
+          color: #000;
+          >img{
+            display: inline-block;
+            width: 40*@rem;
+            height: 40*@rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./lib/flexible/flexible.js"></script>
+    <script src="./lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/commmon.css"/>
+    <link rel="stylesheet" href="./css/baicaijia.css"/>
+</head>
+<body>
+<!--头部开始-->
+<header id="header">
+    <div class="l">
+        <a href="index.html"><</a>
+    </div>
+    <div class="right">
+        <img src="./images/header_app.png" alt=""/>
+    </div>
+    <div class="center">
+        <h1>白菜价-淘宝内部券</h1>
+    </div>
+</header>
+<!--头部结束-->
+
+<!--标题导航栏开始-->
+<div id="title">
+    <div class="title-r">
+    </div>
+    <div class="wrap">
+        <div class="title-l">
+            <ul class="clearfix">
+                <!--<li class="active"><a href="javascript:;">全部</a></li>-->
+                <!--<li><a href="javascript:;">热销</a></li>-->
+                <!--<li><a href="javascript:;">9块邮</a></li>-->
+                <!--<li><a href="javascript:;">19块邮</a></li>-->
+                <!--<li><a href="javascript:;">数码家电</a></li>-->
+                <!--<li><a href="javascript:;">居家</a></li>-->
+                <!--<li><a href="javascript:;">美食</a></li>-->
+                <!--<li><a href="javascript:;">男装</a></li>-->
+                <!--<li><a href="javascript:;">女装</a></li>-->
+                <!--<li><a href="javascript:;">鞋包配饰</a></li>-->
+                <!--<li><a href="javascript:;">文体</a></li>-->
+                <!--<li><a href="javascript:;">母婴</a></li>-->
+                <!--<li><a href="javascript:;">美妆</a></li>-->
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div id="content">
+    <ul class="clearfix">
+        <!--<li>-->
+            <!--<a href="javascript:;">-->
+                <!--<div class="con-l fl">-->
+                    <!--<img src="" alt=""/>-->
+                <!--</div>-->
+                <!--<div class="con-r">-->
+                    <!--<h3>[包邮]中长大衣</h3>-->
+                    <!--<p><span>券后</span><span>&yen;106.0</span><span><del>&yen;206</del></span></p>-->
+                    <!--&lt;!&ndash;<input type="range" max="1" value="50%"/>   <br/>&ndash;&gt;-->
+                    <!--<div class="range">-->
+                        <!--<span class="out">-->
+                             <!--<span class="inner">50%</span>-->
+                        <!--</span>-->
+                        <!--<span>已领取6248张</span>-->
+                    <!--</div>-->
+                    <!--<object>-->
+                        <!--<span><a href="javascript:;">点此领15元优惠券</a></span>-->
+                        <!--<span  class="fr"><a href="javascript:;">下单链接</a></span>-->
+                    <!--</object>-->
+                <!--</div>-->
+            <!--</a>-->
+        <!--</li>-->
+    </ul>
+</div>
+<!--标题导航栏结束-->
+
+<div id="back"><a href="#">Top</a></div>
+
+
+<!--底部开始-->
+<div id="foot">
+    <ul class="clearfix">
+        <li><a href="javascript:;">登录</a></li>
+        <li><a href="javascript:;">注册</a></li>
+        <li><a href="#">
+            <img src="./images/top.jpg" alt=""/>
+            返回顶部</a></li>
+    </ul>
+    <p>
+        <a href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+    </p>
+    <p>m.manmanbuy.com</p>
+</div>
+<!--底部结束-->
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script id="tplTitle" type="text/html">
+    {{each result}}
+    <li class="{{$value.titleId}}"><a href="javascript:;">{{$value.title}}</a></li>
+    {{/each}}
+</script>
+<script id="tplContent" type="text/html">
+    {{each list}}
+    <li>
+         <div class="aw">
+             <div class="con-l fl">
+                 {{#$value.productImg}}
+             </div>
+            <div class="con-r">
+                <h3>{{#$value.productName}}</h3>
+                <p>{{#$value.productPrice}}</p>
+                <div class="range">
+                    {{#$value.productCouponRemain}}
+                </div>
+                <object>
+                     <span>{{#$value.productCoupon}}</span>
+                     <span class="fr">{{#$value.productHref}}</span>
+                </object>
+            </div>
+         </div>
+    </li>
+
+    {{/each}}
+</script>
+<script src="common.js"></script>
+<script src="./js/baicaijia.js"></script>
+</body>
+</html>

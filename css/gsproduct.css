@@ -1,0 +1,212 @@
+#header {
+  position: relative;
+  text-align: center;
+  line-height: 1.306634rem;
+  background-color: #FF841D;
+}
+#header .l {
+  width: 0.66665rem;
+  height: 1.306634rem;
+  line-height: 1.306634rem;
+  position: absolute;
+  top: 0;
+  left: 0.26666rem;
+}
+[data-dpr='1'] #header .l {
+  font-size: 24px;
+}
+[data-dpr='2'] #header .l {
+  font-size: 48px;
+}
+[data-dpr="3"] #header .l {
+  font-size: 72px;
+}
+#header .l a {
+  display: block;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+#header .center h1 {
+  font-weight: 700;
+  color: #ffffff;
+}
+[data-dpr='1'] #header .center h1 {
+  font-size: 20px;
+}
+[data-dpr='2'] #header .center h1 {
+  font-size: 40px;
+}
+[data-dpr="3"] #header .center h1 {
+  font-size: 60px;
+}
+#search {
+  width: 100%;
+  height: 0.959976rem;
+  border: 1px solid #DADADA;
+  background-color: #fff;
+  position: relative;
+}
+#search .search {
+  width: 1.19997rem;
+  height: 0.959976rem;
+  box-sizing: border-box;
+  border-left: 1px solid #DADADA;
+}
+#search .dropDown {
+  margin-right: 1.19997rem;
+  height: 0.959976rem;
+  line-height: 0.959976rem;
+  display: flex;
+}
+#search .dropDown > span {
+  display: block;
+  height: 100%;
+  flex: 1;
+  text-align: center;
+  position: relative;
+  color: #000;
+}
+[data-dpr='1'] #search .dropDown > span {
+  font-size: 14px;
+}
+[data-dpr='2'] #search .dropDown > span {
+  font-size: 28px;
+}
+[data-dpr="3"] #search .dropDown > span {
+  font-size: 42px;
+}
+#search .dropDown > span i {
+  display: inline-block;
+  width: 0.26666rem;
+  height: 0.26666rem;
+  background: url("../images/icon_bar.png") -176px 0;
+  background-size: 220px 132px;
+}
+#search .dropDown > span:nth-last-child(1) {
+  flex: 2;
+}
+#search .close > .wrap {
+  position: absolute;
+  width: 100%;
+  top: 0.999975rem;
+  left: 0;
+  z-index: 5;
+  background-color: #fff;
+  border-bottom: 1px solid #BDBDAE;
+  box-shadow: 0.066665rem 0.066665rem 0.066665rem #cccccc;
+}
+#search .close > .wrap > span {
+  display: block;
+  width: 100%;
+  height: 0.959976rem;
+  line-height: 0.959976rem;
+  border-bottom: 1px solid #BDBDAE;
+  position: relative;
+}
+#search .close > .wrap > span a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.26666rem;
+  box-sizing: border-box;
+  color: #000;
+}
+#search .close > .wrap > .on::after {
+  content: '';
+  width: 0.599985rem;
+  height: 0.599985rem;
+  position: absolute;
+  top: 50%;
+  right: 0.26666rem;
+  transform: translateY(-50%);
+  background: url("../images/ok.svg") no-repeat center;
+  background-size: 0.599985rem 0.599985rem;
+}
+#search .close > .wrap.hide {
+  display: none;
+}
+#search .close > .price span {
+  position: relative;
+}
+#search .close > .price span::after {
+  content: '';
+  width: 0.599985rem;
+  height: 0.599985rem;
+  position: absolute;
+  top: 50%;
+  right: 0.26666rem;
+  transform: translateY(-50%);
+  background: url("../images/ok.svg") no-repeat center;
+  background-size: 0.599985rem 0.599985rem;
+}
+#display {
+  width: 100%;
+  padding: 0.199995rem;
+  margin-bottom: 0.66665rem;
+  box-sizing: border-box;
+}
+#display > ul {
+  width: 100%;
+}
+#display > ul > li {
+  width: 4.733215rem;
+  height: 6.066515rem;
+  margin-bottom: 0.199995rem;
+  background-color: #fff;
+}
+#display > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#display > ul > li > a > img {
+  width: 100%;
+}
+#display > ul > li > a > p {
+  width: 100%;
+  position: absolute;
+  bottom: 1.06664rem;
+  left: 0;
+  color: #000000;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#display > ul > li > a > .wrap {
+  width: 100%;
+  position: absolute;
+  bottom: 0.13333rem;
+  left: 0;
+}
+#display > ul > li > a > .wrap > span {
+  color: #F6513A;
+}
+[data-dpr='1'] #display > ul > li > a > .wrap > span {
+  font-size: 14px;
+}
+[data-dpr='2'] #display > ul > li > a > .wrap > span {
+  font-size: 28px;
+}
+[data-dpr="3"] #display > ul > li > a > .wrap > span {
+  font-size: 42px;
+}
+#display > ul > li > a > .wrap > span:nth-last-of-type(1) {
+  width: 1.73329rem;
+  height: 0.733315rem;
+  border-radius: 0.066665rem;
+  border: 1px solid #F64F16;
+  background-color: #FF9501;
+  float: right;
+  text-align: center;
+  line-height: 0.733315rem;
+  color: #ffffff;
+}
+#display > ul > li:nth-child(2n) {
+  float: right;
+}
+#display > ul > li:nth-child(2n+1) {
+  float: left;
+}

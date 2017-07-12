@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./lib/flexible/flexible.js"></script>
+    <script src="./lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/commmon.css"/>
+    <link rel="stylesheet" href="./css/moneyctrl.css"/>
+</head>
+<body>
+<!--头部开始-->
+<header id="header">
+    <div class="l">
+        <a href="index.html"><</a>
+    </div>
+    <div class="right">
+        <img src="./images/header_app.png" alt=""/>
+    </div>
+    <div class="center">
+        <h1>省钱控-最新优惠</h1>
+    </div>
+</header>
+
+<section id="display">
+    <ul>
+        <!--<li>-->
+            <!--<a href="#">-->
+                <!--<div class="left">-->
+                    <!--<img src="./images/product.jpg" alt="加载失败"/>-->
+                <!--</div>-->
+                <!--<div class="right">-->
+                    <!--<h3>标题 <span>价格说明</span></h3>-->
+                    <!--<div class="bot">-->
+                        <!--<span>商品发布信息</span>-->
+                        <!--<span>1</span>-->
+                        <!--<i><img src="./images/comment.png" alt=""/></i>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+            <!--</a>-->
+        <!--</li>-->
+    </ul>
+
+    <div class="page">
+        <span class="prev">
+            <a href="javascript:;">上一页</a>
+        </span>
+        <span>
+            <select name="" >
+                <!--<option value="">1/14</option>-->
+            </select>
+        </span>
+        <span class="next">
+            <a href="javascript:;">下一页</a>
+        </span>
+    </div>
+</section>
+<!--头部结束-->
+
+
+<!--品牌排行部分结束-->
+
+<!--底部开始-->
+<div id="foot">
+    <ul class="clearfix">
+        <li><a href="#">登录</a></li>
+        <li><a href="#">注册</a></li>
+        <li><a href="#">
+            <img src="./images/top.jpg" alt=""/>
+            返回顶部</a></li>
+    </ul>
+    <p>
+        <a href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+    </p>
+    <p>m.manmanbuy.com</p>
+</div>
+
+<!--底部结束-->
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script type="text/html" id="tpl">
+    {{each result}}
+    <li>
+        <a href="moneyproduct.html?productid={{$value.productId}}">
+            <div class="left">
+                {{#$value.productImg2}}
+            </div>
+            <div class="right">
+                <h3>{{$value.productName}}<span>{{$value.productPinkage}}</span></h3>
+                <div class="bot">
+                    <span>{{$value.productFrom}} | {{$value.productTime}}</span>
+                    <span>{{$value.productComCount}}</span>
+                    <i><img src="./images/comment.png" alt=""/></i>
+                </div>
+
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+
+<script src="./common.js"></script>
+<script src="./js/moneyctrl.js"></script>
+
+</body>
+</html>

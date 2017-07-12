@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./lib/flexible/flexible.js"></script>
+    <script src="./lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/commmon.css"/>
+    <link rel="stylesheet" href="./css/inlanddiscount.css"/>
+</head>
+<body>
+<!--头部开始-->
+<header id="header">
+    <div class="l">
+        <a href="index.html"><</a>
+    </div>
+    <div class="right">
+        <img src="./images/header_app.png" alt=""/>
+    </div>
+    <div class="center">
+        <h1>国内折扣</h1>
+    </div>
+</header>
+
+<div id="content">
+    <ul class="content clearfix">
+        <li class="line"></li>
+        <!--<li class="w50">-->
+            <!--<a href="javascript:;">-->
+                <!--<img src="" alt=""/>-->
+                <!--<p class="title">-->
+                    <!--西域没弄新疆特产五星和田红枣250*2-->
+                    <!--西域没弄新疆特产五星和田红枣250*2-->
+                    <!--西域没弄新疆特产五星和田红枣250*2-->
+                <!--</p>-->
+                <!--<p class="price">19.8元(5件99元)</p>-->
+                <!--<p class="tips"><span>京东商城</span> | <span>10-22 13:29</span></p>-->
+            <!--</a>-->
+        <!--</li>-->
+    </ul>
+</div>
+
+<div id="foot">
+    <ul class="clearfix">
+        <li><a href="javascript:;">登录</a></li>
+        <li><a href="javascript:;">注册</a></li>
+        <li><a href="#">
+            <img src="./images/top.jpg" alt=""/>
+            返回顶部</a></li>
+    </ul>
+    <p>
+        <a href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+    </p>
+    <p>m.manmanbuy.com</p>
+</div>
+
+
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script src="common.js"></script>
+
+<script id="tpl" type="text/html">
+{{each list}}
+<li class="w50">
+    <a href="discount.html?productid={{$value.productId}}">
+        {{#$value.productImg}}
+        <p class="title">{{$value.productName}}</p>
+        <p class="price">{{$value.productPrice}}</p>
+        <p class="tips"><span>{{$value.productFrom}}</span> | <span>{{$value.productTime}}</span></p>
+    </a>
+</li>
+{{/each}}
+
+</script>
+
+<script src="./js/inlanddiscount.js"></script>
+</body>
+</html>

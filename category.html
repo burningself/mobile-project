@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./lib/flexible/flexible.js"></script>
+    <script src="./lib/flexible/flexible_css.js"></script>
+    <link rel="stylesheet" href="./css/base.css"/>
+    <link rel="stylesheet" href="./css/commmon.css"/>
+    <link rel="stylesheet" href="./css/category.css"/>
+
+</head>
+<body>
+
+<!--头部开始-->
+<header id="header">
+    <div class="left">
+        <img src="./images/header_logo.png" alt=""/>
+    </div>
+    <div class="right">
+        <img src="./images/header_app.png" alt=""/>
+    </div>
+</header>
+<!--头部结束-->
+
+<!--搜索框开始-->
+<section id="search-box">
+    <input type="button" value="搜索"/>
+    <div class="wrap">
+        <input type="search" placeholder="请输入您想要比价的商品"/>
+    </div>
+</section>
+<!--搜索框结束-->
+<!--下拉列表开始-->
+
+<section id="dropDown">
+    <ul class="category-list">
+        <!--<li>-->
+            <!--<a href="#">大家电</a>-->
+            <!--<ul class="category-content clearfix">-->
+                <!--<li><a href="#">电视</a></li>-->
+                <!--<li><a href="#">空调</a></li>-->
+                <!--<li><a href="#">影院</a></li>-->
+                <!--<li><a href="#">冰箱</a></li>-->
+                <!--<li><a href="#">DVD</a></li>-->
+            <!--</ul>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<a href="#">大家电</a>-->
+            <!--<ul class="category-content clearfix">-->
+                <!--<li><a href="#">电视</a></li>-->
+                <!--<li><a href="#">空调</a></li>-->
+                <!--<li><a href="#">影院</a></li>-->
+                <!--<li><a href="#">冰箱</a></li>-->
+                <!--<li><a href="#">DVD</a></li>-->
+            <!--</ul>-->
+        <!--</li>-->
+    </ul>
+</section>
+<!--下拉列表结束-->
+
+
+
+<!--底部开始-->
+<div id="foot">
+    <ul class="clearfix">
+        <li><a href="#">登录</a></li>
+        <li><a href="#">注册</a></li>
+        <li><a href="#">
+            <img src="./images/top.jpg" alt=""/>
+            返回顶部</a></li>
+    </ul>
+    <p>
+        <a href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        -- 掌上比价平台
+    </p>
+    <p>m.manmanbuy.com</p>
+</div>
+<!--底部结束-->
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template.js"></script>
+<script id="tpl" type="text/html">
+    {{each list as item}}
+    <li data-titleId="{{item.titleId}}">
+        <a href="javascript:;">{{item.title}}</a>
+        <ul class="category-content clearfix">></ul>
+    </li>
+    {{/each}}
+</script>
+<script id="tpl1" type="text/html">
+    {{each result as}}
+     <li>
+      <a href="productlist.html?categoryId={{$value.categoryId}}&category={{$value.category}}&pageid=1">{{$value.category}}</a>
+     </li>
+    {{/each}}
+</script>
+
+<script>
+
+    $.ajax({
+        url:"http://127.0.0.1:9090/api/getcategorytitle",
+        dataType:"jsonp",
+        success:function(data){
+//            console.log(data);
+            var tplStr = template("tpl",{list:data.result});
+            $("#dropDown ul").html(tplStr);
+            $(".category-list>li>a").on("click",function() {
+                var titleid = $(this).parent().attr("data-titleId");
+                $.ajax({
+                    url:"http://127.0.0.1:9090/api/getcategory",
+                    dataType:"jsonp",
+                    data:{
+                        titleid:titleid
+                    },
+                    success:function(data) {
+                        console.log(data);
+                        var tplStr = template("tpl1", data);
+                        $(".category-content").html(tplStr);
+                        if($(".category-content").eq(titleid).css("display") == "none"){
+                            $(".category-content").css("display","none");
+                            $(".category-content").eq(titleid).css("display","block");
+                        }else{
+                            $(".category-content").eq(titleid).css("display","none");
+                        }
+                    }
+                })
+            })
+
+        }
+    });
+
+
+//
+</script>
+
+</body>
+</html>
